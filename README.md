@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 - Azure Resource Group with JumpBox, DVWA server & ELK Server: 
 ![]('diagrams/ELK_stack.drawio.png')
 
- <img src="diagrams/ELKstack.png" alt="ELK Stack Diagram">
+ <img src="diagrams/ELK_stack.drawio.png" alt="ELK Stack Diagram">
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the metricbeat-playbook.yml & metricbeat-config.yml or filebeat-playbook.yml & filebeat-config.yml file may be used to install only certain pieces of it, such as Filebeat.
 
