@@ -9,7 +9,7 @@ The files in this repository were used to configure the network depicted below.
 ![](diagrams/ELKStack.png)
 
 - three 
-![]('diagrams/ELKStack.png')
+![]('diagrams/ELK_stack.drawio.png')
 
  <img src="diagrams/ELKstack.png" alt="ELK Stack Diagram">
 
@@ -43,7 +43,6 @@ Load balancing ensures that the application will be highly available, in additio
 The advantage of the jump box:
 - The jump box prevents all Azure VM's to expose to the public. We can do monitoring and logging on a single box. We can easily turn the ON/OFF remote desktop connectivity feature. By using the network security group, we can restrict the IP addresses to communicate with the Jump box.
 
-_TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
