@@ -2,13 +2,8 @@
 
 The files in this repository were used to configure the network depicted below.
 
-- one 
-![](/diagrams/ELKStack.png)
 
-- two
-![](diagrams/ELKStack.png)
-
-- three 
+- Azure Resource Group with JumpBox, DVWA server & ELK Server: 
 ![]('diagrams/ELK_stack.drawio.png')
 
  <img src="diagrams/ELKstack.png" alt="ELK Stack Diagram">
