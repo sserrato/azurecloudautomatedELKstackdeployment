@@ -35,16 +35,18 @@ Load balancing ensures that the application will be highly available, in additio
 - A load balancer ensures no single server has to handle too much traffic.
 - Load balancers help protect the **availability** of resources.
 
-The advantage of the jump box:
-- The jump box prevents all Azure VM's to expose to the public. We can do monitoring and logging on a single box. We can easily turn the ON/OFF remote desktop connectivity feature. By using the network security group, we can restrict the IP addresses to communicate with the Jump box.
+The advantages of the Jump Box:
+- The jump box prevents all Azure VM's to expose to the public. We can do monitoring and logging on a single box. 
+- We can easily turn the ON/OFF remote desktop connectivity feature. 
+- By using a network security group, we can restrict the IP addresses to communicate only with the Jump Box.
 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
+- Filebeat monitors the log files from the vulnerable VMs, collects log events and forwards them to Elasticsearch/Logstash and then onto Kibana for visualization. 
+- Metricbeat collect metrics from the virtual boxes systems and services. These system and services statistics are hten forwarded to Elasticsearch/Logstash and visualized in the Kibana web app. 
 
-The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+The configuration details of each machine are found below.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
