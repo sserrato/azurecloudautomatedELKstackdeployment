@@ -112,12 +112,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the `install-elk.yml` file to ```/etc/ansible```.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Update the `hosts` file to include your ELK server IPs under a `elk` header. 
+- Open the `ansible.cfg` with `nano /etc/ansible/ansible.cfg` and scroll down to the remote_user option, uncomment the remote_user line and replace root with your admin username using this format: `remote_user = <user-name-for-ELK-VMs>`
+- Run the playbook, and navigate to Kibana Metricbeat or Filebeat installition page by scrolling to Step 5: Module Status and cilck Check Data, click on Verify Incoming Data. 
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
