@@ -70,11 +70,12 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 76.168.0.0/13   |
-| Web1     | No                  |                      |
-| Web2     | No                    |                      |
-| Web3     | No                  |                      |
-| ELK Host | Yes                    |   76.168.0.0/13                    |
+| Jump Box | Yes                 | Home Machine IP on Port 22   |
+| Web1     | No                  | 10.1.0.9 on Port 22 |
+| Web2     | No                  | 10.1.0.9 on Port 22 |
+| Web3     | No                  | 10.1.0.9 on Port 22 |
+| ELK Host | Yes                 | Home Machine IP on Port 5601 |
+
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because machines can be brought online with provisioning and management of computing infrastructure and related configuration through machine-processable definition files.
