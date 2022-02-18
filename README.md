@@ -54,17 +54,16 @@ The configuration details of each machine are found below.
 | Web1     | Web Server |10.1.0.7            |Linux (Ubuntu 18.04) |
 | Web2     | Web Server |10.1.0.8            |Linux (Ubuntu 18.04)|
 | Web3     | Web Server |10.1.0.10     |Linux (Ubuntu 18.04)|
-| ELK Host | Elastic (ELK Server)|104.42.199.66 |Linux (Ubuntu 18.04)|
+| ELK Host | Elastic (ELK Server) Monitoring |104.42.199.66 |Linux (Ubuntu 18.04)|
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the ELK Host machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- Home Machine IP on Ports 22 and 5601.
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box Private IP on Port 22.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -91,19 +90,28 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+
+
+| Name     | Function | IP Address | Operating System |
+|----------|---------------------|----------------------|
+| Web1     | Web Server |10.1.0.7            |Linux (Ubuntu 18.04) |
+| Web2     | Web Server |10.1.0.8            |Linux (Ubuntu 18.04)|
+| Web3     | Web Server |10.1.0.10     |Linux (Ubuntu 18.04)|
+
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metric Meat 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat monitors the log files from the vulnerable VMs, collects log events and forwards them to Elasticsearch/Logstash and then onto Kibana for visualization. 
+- Metricbeat collect metrics from the virtual boxes systems and services. These system and services statistics are hten forwarded to Elasticsearch/Logstash and visualized in the Kibana web app. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
+- Copy the `install-elk.yml` file to ```/etc/ansible```.
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
