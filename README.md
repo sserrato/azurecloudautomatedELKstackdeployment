@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
  <img src="diagrams/ELK_stack.drawio.png" alt="ELK Stack Diagram">
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the metricbeat-playbook.yml & metricbeat-config.yml or filebeat-playbook.yml & filebeat-config.yml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the `metricbeat-playbook.yml `& `metricbeat-config.yml` or `filebeat-playbook.yml` & `filebeat-config.yml` file may be used to install only certain pieces of it, such as Filebeat.
 
   - /etc/ansible/install-elk.yml 
   - /etc/ansible/files/filebeat-config.yml
@@ -48,11 +48,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 40.124.6.94| Linux            |
-| Web1     |          |10.1.0.7            |                  |
-| Web2     |          |10.1.0.8            |                  |
-| Web3     |          |10.1.0.10     |                  |
-| ELK Host |          |            |                  |
+| Jump Box | Gateway  | 40.124.6.94| Linux (Ubuntu 18.04) |
+| Web1     | Web Server |10.1.0.7            |Linux (Ubuntu 18.04) |
+| Web2     | Web Server |10.1.0.8            |Linux (Ubuntu 18.04)|
+| Web3     | Web Server |10.1.0.10     |Linux (Ubuntu 18.04)|
+| ELK Host | Elastic (ELK Server)|104.42.199.66 |Linux (Ubuntu 18.04)|
 
 ### Access Policies
 
